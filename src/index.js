@@ -24,6 +24,7 @@ import Staff from "../routes/staff";
 
 //utilities
 const app = express();
+const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(morgan("dev"));
 app.use(cookieParser());
@@ -78,6 +79,6 @@ app.use("/", Document);
 app.use("/admin", Admin);
 app.use("/staff",Staff);
 
-app.listen(5000, () => {
-  console.log("Running on", 5000);
+app.listen(port, () => {
+  console.log("Running on", );
 });
